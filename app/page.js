@@ -1,21 +1,28 @@
 'use client';
 
+import { TikTok_Sans } from "next/font/google"; 
 import { useState, useEffect, useRef } from "react";
+
+const tiktokSans = TikTok_Sans({
+  subsets: ["latin"],
+  weight: ["400","500","600","700"],
+});
 
 // ─── DATA ───────────────────────────────────────────────────────────────────
 
 const PROFILE = {
-  name: "Alex Rivera",
-  title: "Product Designer · Developer · Photographer",
-  bio: "I craft interfaces that feel inevitable. 5+ yrs building at the intersection of design and engineering.",
+  name: "Roxanne Williams",
+  title: "Digital Marketer · Social Media Manager · Graphic Designer · Ad Specialist",
+  bio: "I engineer social strategies that convert. 5+ yrs optimizing digital campaigns, ad performance, and brand presence across platforms.",
   avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=200&h=200&fit=crop&crop=face",
-  location: "San Francisco, CA",
+  location: "Johannesburg, South Africa",
   available: true,
   links: {
     linkedin: "#",
     github: "#",
     instagram: "#",
     dribbble: "#",
+    TikTok_Sans: "#",
   },
 };
 
@@ -661,12 +668,12 @@ const Feed = ({ onProjectClick }) => {
 
 // ─── APP ─────────────────────────────────────────────────────────────────────
 
-export default function App() {
+export default function Page() {
   const [activeTab, setActiveTab] = useState("Feed");
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <>
+    <div className={tiktokSans.className}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500;600&display=swap');
         * { box-sizing: border-box; margin: 0; padding: 0; }
