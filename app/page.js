@@ -700,6 +700,6 @@ export default function Page() {
           <CaseStudy project={selectedProject} onClose={() => setSelectedProject(null)} />
         )}
       </div>
-    </>
+    </div>
   );
 }
